@@ -1,7 +1,14 @@
-dim_valuechain <- c('frontoffice', 'backoffice', 'infrastructure')
-dim_financialservicearea <- c('investment_wealthmgmt', 'savings', 'payments', 'lending', 'capital_raising', 'market_provisioning', 'insurance')
-dim_customer <- c('b2c', 'b2b')
-cell_attributes <- c('txc_search', 'txc_verification', 'txc_monitoring', 'txc_enforcement', 'txc_automation', 'info_asymmetries', 'at_maturity', 'at_denomination', 'at_liquidity', 'at_risk')
+# Todo: Need to adapt these to the input column names from csv file
+# dim_valuechain <- c('frontoffice', 'backoffice', 'infrastructure')
+# dim_financialservicearea <- c('investment_wealthmgmt', 'savings', 'payments', 'lending', 'capital_raising', 'market_provisioning', 'insurance')
+# dim_customer <- c('b2c', 'b2b')
+# cell_attributes <- c('txc_search', 'txc_verification', 'txc_monitoring', 'txc_enforcement', 'txc_automation', 'info_asymmetries', 'at_maturity', 'at_denomination', 'at_liquidity', 'at_risk')
+
+# Todo: Here is a fix that makes the program run. However, there is no sense involved in the choosing of where to put the column names. You need to think about that.
+dim_valuechain <- c('cap_money')
+dim_financialservicearea <- c('traditional_funding_before')
+dim_customer <- c('profit')
+cell_attributes <-c("blockchain",'single','token_utility_product','only_payment','transaction','generation','other_usage','main_value','voting_shareholder','voting_product','voting_other','profit_sharing','info','cap_money','same_price','expensive','cap_time','bitcoin','Ethereum','other_bc','bs','other_p','transaction_fee')
 
 .analysis.runSignificanceTests <- function(data){  
   

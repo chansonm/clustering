@@ -2,7 +2,8 @@
   csv <- fread(filename)
   data <- copy(csv)
   # REMOVE EXCLUDED COMPANIES
-  data <- data[which(data$excluded == 0),]
+  # Todo: We do not need to exclude anything so far
+  # data <- data[which(data$excluded == 0),]
   return(data)
 
 }

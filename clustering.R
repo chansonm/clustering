@@ -1,4 +1,4 @@
-# TODO: Adapt distance measure
+# Todo: Adapt distance measure
 .clustering.distanceMethod = "euclidean" # originally: "euclidean", then: "jaccard"
 .clustering.Method = "ward" #originally: ward
 
