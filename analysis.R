@@ -122,4 +122,3 @@ test.all <- function(variableName, data){
   print(results)
   return(results)
 }
-

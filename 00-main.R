@@ -1,12 +1,12 @@
 require(data.table)
 require(vegan)
-source("Documents/Master thesis/R_scripts/prep-data.R")
-source("Documents/Master thesis/R_scripts/pca.R")
-source("Documents/Master thesis/R_scripts/clustering.R")
-source("Documents/Master thesis/R_scripts/analysis.R")
+source("./prep-data.R")
+source("./pca.R")
+source("./clustering.R")
+source("./analysis.R")
 
 # Read data and test that they're OK
-filename <- "Documents/Master thesis/for_R.xlsx"
+filename <- "./simple_data.csv"
 #excludedColumns <- c("name",	"traditional_funding_before",	"traditional_funding_after",	"%",	"profit	blockchain",	"single",	"token_utility_product",	"only_payment",	"transaction",	"generation",	"other_usage",	"main_value",	"voting_shareholder",	"voting_product",	"voting_other",	"profit_sharing",	"info", "funding", 	"coin_offered",	"cap_money",	"same_price",	"expensive",	"start_date",	"ICO_days",	"cap_time",	"bitcoin",	"Ethereum",	"other_bc",	"bs",	"other_p",	"transaction_fee")
 excludedColumns <- c("name")
 data <- .data.read(filename)

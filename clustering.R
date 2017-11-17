@@ -1,5 +1,5 @@
 # TODO: Adapt distance measure
-.clustering.distanceMethod = "euclidean" # originally: euclidean
+.clustering.distanceMethod = "euclidean" # originally: "euclidean", then: "jaccard"
 .clustering.Method = "ward" #originally: ward
 
 # stopping-rule for cuttind a dendogram ------------------------------------------------
