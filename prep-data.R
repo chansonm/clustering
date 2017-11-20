@@ -19,3 +19,4 @@
   apply(dataForClustering, 2, var)  
   return(dataForClustering)
 }
+

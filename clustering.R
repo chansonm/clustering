@@ -138,3 +138,4 @@
   } 
   plot(1:15, wss, type="b", xlab="Number of Clusters",ylab="Within groups sum of squares")
 }
+

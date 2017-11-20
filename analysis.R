@@ -8,7 +8,7 @@
 dim_valuechain <- c('cap_money')
 dim_financialservicearea <- c('traditional_funding_before')
 dim_customer <- c('profit')
-cell_attributes <-c("blockchain",'single','token_utility_product','only_payment','transaction','generation','other_usage','main_value','voting_shareholder','voting_product','voting_other','profit_sharing','info','cap_money','same_price','expensive','cap_time','bitcoin','Ethereum','other_bc','bs','other_p','transaction_fee')
+cell_attributes <-c("blockchain",'single','token_utility_product','only_payment','transaction','generation','other_usage','ico_days','u_transactioin','u_access_service','u_profit_sharing','u_other','voting_shareholder','voting_product','voting_other','profit_sharing','info','cap_money','same_price','expensive','cap_time','bitcoin','Ethereum','other_bc','bs','other_p','transaction_fee')
 
 .analysis.runSignificanceTests <- function(data){  
   
@@ -129,3 +129,4 @@ test.all <- function(variableName, data){
   print(results)
   return(results)
 }
+
