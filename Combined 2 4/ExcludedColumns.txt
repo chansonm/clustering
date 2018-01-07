@@ -1,0 +1,33 @@
+Vielversprechend: 2er und 4er Teilung
+
+excludedColumns <- c("name",
+                     "traditional_funding_after",
+                     "%",
+                     "opensource_solution",
+                     "nonprofit_cryptocurrency",
+                     "existence_m",
+                     "fte",
+                     "token_utility_product",
+                     "only_payment",
+                     "transaction",
+                     "generation",
+                     "other_usage",
+                     "info",
+                     "funding",
+                     "coin_offered",
+                     "cheaper",
+                     "price_ratio",
+                     "start_date",
+                     "ICO_days",
+                     "bs",
+                     "other_p",
+                     "minimum_pledge",
+                     "high_transaction_fee",
+                     "platform_used",
+                     "In_2017",
+                     "funding_standardized")
+
+
+MOJENA VALUE:
+5 und 2.75
+(für 2 und 4 clusters)

@@ -4,13 +4,36 @@ source("./prep-data.R")
 source("./pca.R")
 source("./clustering.R")
 source("./analysis.R")
-
 # Read data and test that they're OK
-# Todo: Replace this path with the filename you want to read
-filename <- "./for_R_no_decimals.csv"
-#excludedColumns <- c("name",	"traditional_funding_before",	"traditional_funding_after",	"%",	"profit	blockchain",	"single",	"token_utility_product",	"only_payment",	"transaction",	"generation",	"other_usage",	"main_value",	"voting_shareholder",	"voting_product",	"voting_other",	"profit_sharing",	"info", "funding", 	"coin_offered",	"cap_money",	"same_price",	"expensive",	"start_date",	"ICO_days",	"cap_time",	"bitcoin",	"Ethereum",	"other_bc",	"bs",	"other_p",	"transaction_fee")
-#  Todo: We do not want to exclude the column "name". Therefore I commented this line below out.
-# excludedColumns <- c("name")
+# TODO: Replace this path with the filename you want to read
+filename <- "./for_R_master.csv"
+excludedColumns <- c("name",
+                     "traditional_funding_after",
+                     "%",
+                     "opensource_solution",
+                     "nonprofit_cryptocurrency",
+                     "existence_m",
+                     "fte",
+                     "token_utility_product",
+                     "only_payment",
+                     "transaction",
+                     "generation",
+                     "other_usage",
+                     "info",
+                     "funding",
+                     "coin_offered",
+                     "cheaper",
+                     "price_ratio",
+                     "start_date",
+                     "ICO_days",
+                     "bs",
+                     "other_p",
+                     "minimum_pledge",
+                     "high_transaction_fee",
+                     "platform_used",
+                     "In_2017",
+                     "funding_standardized")
+#excludedColumns <- c("name")
 data <- .data.read(filename)
 dataForClustering <- .data.prepAndTest(data, excludedColumns)
 
@@ -22,7 +45,7 @@ dataForClustering <- .data.prepAndTest(data, excludedColumns)
 
 # Clustering
 .clustering.screePlot(dataForClustering)
-mojenaTestCriticalValue <- 3.0 # suggested: 2.75 - 3.50; higher values lead to fewer clusters; 1.25 also seems to be a popular choice
+mojenaTestCriticalValue <- 2.5 # suggested: 2.75 - 3.50; higher values lead to fewer clusters; 1.25 also seems to be a popular choice
 
 # CHOSE EITHER PCA clustering OR RAW DATA CLUSTERING
 # clusteringOutput <- .clustering.withPCA(pr.out, 6, mojenaTestCriticalValue)
@@ -32,11 +55,12 @@ data <- .clustering.bindResults(data, clusteringOutput)
 dataForClustering <- .clustering.bindResults(dataForClustering, clusteringOutput)
 clusteredCompanyIds <- .clustering.displayClusters(data, clusteringOutput)
 #write.csv(clusteredCompanyIds, file="~/Downloads/clustering-results.csv") # THIS DOES NOT WORK YET
+write.csv(data, file="./clustering-results.csv")
 
 #.clustering.overviewClusterStats(dataForClustering, clusteringOutput)
 #.clustering.detailedAttributeClusterStats(dataForClustering, clusteringOutput, "savings")
 # Analysis
 
-results <- .analysis.runSignificanceTests(dataForClustering)
-write.csv(results, file="~/Downloads/analytics-results.csv")
-correlation.results <- .analysis.correlationMatrixValuechainAreaCustomersegment(dataForClustering)
+# results <- .analysis.runSignificanceTests(dataForClustering)
+# write.csv(results, file="~/Downloads/analytics-results.csv")
+# correlation.results <- .analysis.correlationMatrixValuechainAreaCustomersegment(dataForClustering)
